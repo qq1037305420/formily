@@ -133,7 +133,7 @@ const resolveChildren = (grid: Grid<HTMLElement>) => {
       node.element.style.gridColumn = gridColumn
     }
     if (node.visible) {
-      walked += span
+      walked += originSpan === -1 ? 1 : span
     }
     shadowWalked += span
     if (columnIndex === 0) {
